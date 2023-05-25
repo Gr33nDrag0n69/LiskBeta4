@@ -46,6 +46,7 @@ Please note that the following betanet specific information is not in the docume
 ```
 
 * Lisk.com: [Lisk-Core v4](https://lisk.com/documentation/lisk-core/v4/index.html)
+  * Lisk.com: [Prepare and Enable your Validator](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
   * Lisk.com: [Lisk-Core CLI](https://lisk.com/documentation/lisk-core/v4/core-cli.html)
 * Lisk.com: [Lisk-SDK v6](https://lisk.com/documentation/lisk-sdk/v6/index.html)
 
