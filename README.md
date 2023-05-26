@@ -42,6 +42,7 @@ My experience on betanet won't be the same without your work.
 ```
 Please note that the following betanet specific information is not in the documentation:
 
+* OS: Ubuntu 20
 * Port #: 7667
 ```
 
@@ -65,7 +66,7 @@ Soon TM
 
 ## Faucet
 
-* [Lisk.io - BetaNet v4 Faucet]()
+* Lisk.com - [BetaNet v4 Faucet](https://betanet-faucet.lisk.com/)
 
 ## Public API Endpoints
 
