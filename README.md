@@ -29,6 +29,7 @@ This project is based on my configuration.
 It was created with a mix of existing guides, documentation reading & personal experience.
 
 Thanks to all peoples in lisk community participating on lisk-core betanet.
+In particular to **przemer** for his answers.
 My experience on betanet won't be the same without your work.
 
 # Links
@@ -59,7 +60,7 @@ Please note that the following betanet specific information is not in the docume
 
 ## My Guides
 
-Soon TM
+* [Install Lisk-Core 4 Beta 0](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
 
 ## Community Guides
 
