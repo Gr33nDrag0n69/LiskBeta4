@@ -138,6 +138,8 @@ echo "IMPORTANT !!!"
 echo ""
 echo "In theory, from now on (The keys are imported on the nodes), you don't need the clear-text files on the server in the '~/config/' directory."
 echo ""
+ls -l ~/config/
+echo ""
 echo "For security purpose, save a copy of the file(s) to a safe location & delete them from the server."
 echo "Make sure to backup them even if you leave them on the server since if you want to restore the server or use the validator on another node, you will need part of these informations."
 echo ""
