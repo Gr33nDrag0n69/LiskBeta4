@@ -1,0 +1,4 @@
+{
+  "name": "lisk-core",
+  "script": "lisk-core start -n betanet"
+}
