@@ -186,6 +186,8 @@ Script tasks:
 
 ## Wait for Validator to generate a block as Generator
 
+*Because the SelfStake need between 206 and 308 blocks to "finalized" after you voted yourself, it take between 2 and 3 rounds before your validator goes from standby to active.*
+
 * Open the account in Lisk Wallet.
 * Go to the validators section & search your validator name.
 * You should have the `standby` status.
