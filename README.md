@@ -21,7 +21,7 @@ Misc. stuff related to lisk-core v4 beta network.
 
 # Disclaimer
 
-Valid for Lisk-Core 4 Betanet 1 ONLY!
+Valid for Lisk-Core 4 Betanet 0 ONLY!
 
 **For most questions, take the time to read official Lisk-Core & Lisk-SDK documentation! [Links below](#documentation)**
 
