@@ -142,7 +142,14 @@ If you want to understand the process, use the [Official Documentation](https://
 
 You can also use this script that bundle all steps into a single command.
 
+```shell
+curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-create-validator.sh -o ~/lisk-create-validator.sh
+chmod 700 ~/lisk-create-validator.sh
+~/lisk-create-validator.sh
+```
+
 Script tasks:
+
 * 1.0 Nothing to do
 * 2.1.1 Create the validator keys & save output to '~/config/ValidatorKeys.json'
 * 2.1.2 Show '~/config/ValidatorKeys.json' content
@@ -160,13 +167,14 @@ Script tasks:
 * 4.1.2 Show '~/config/HashOnionSeeds.json' content
 * 5.0 Nothing to do
 * 6.0 Enable block generation for the first time (Using 0 0 0)
-* 7.0 SelfStake 1000 LSK to increase the validator weight
-
-```shell
-curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-create-validator.sh -o ~/lisk-create-validator.sh
-chmod 700 ~/lisk-create-validator.sh
-~/lisk-create-validator.sh
-```
+* 7.0 SelfStake to increase the validator weight
+* 7.1.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)
+* 7.1.2 Save SelfStake Transaction to '~/config/SelfStakeTransaction.json'
+* 7.1.3 Show '~/config/SelfStakeTransaction.json'
+* 7.2 Send the transaction
+* Wait 25 seconds (For transaction to get included in a block)
+* 7.3.1 Save SelfStake validator details to '~/config/SelfStakeValidatorDetails.json'
+* 7.3.2 Show '~/config/SelfStakeValidatorDetails.json' content
 
 ## Download Forging Enable Script
 
