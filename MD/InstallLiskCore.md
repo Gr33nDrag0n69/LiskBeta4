@@ -134,6 +134,8 @@ lisk-core endpoint:invoke token_getBalance '{"address":"lsk3oe7hmf5k5e4f58zhmbou
 
 For some reasons the default config.json (or your custom-config) need to be edited to prevent a bug during keys import.
 
+**After the config file is fixed, don't forget to stop/start the node to apply the new config file before proceeding with the next steps!**
+
 ```txt
 vi ~/.lisk/lisk-core/config/config.json
 
