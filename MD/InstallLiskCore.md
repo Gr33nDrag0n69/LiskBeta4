@@ -13,10 +13,10 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
 - [Wait for the lisk-core node to be sync.](#wait-for-the-lisk-core-node-to-be-sync)
 - [Validate the Account have the required funds.](#validate-the-account-have-the-required-funds)
 - [Create \& Enable Validator](#create--enable-validator)
+- [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
 - [Download Forging Enable Script](#download-forging-enable-script)
 - [Download Create Snapshot Script](#download-create-snapshot-script)
 - [Download Rebuild From Snapshot Script](#download-rebuild-from-snapshot-script)
-- [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
 
 ## Install Base
 
@@ -182,6 +182,12 @@ Script tasks:
 * 7.3.1 Save SelfStake validator details to '~/config/SelfStakeValidatorDetails.json'
 * 7.3.2 Show '~/config/SelfStakeValidatorDetails.json' content
 
+## Wait for Validator to generate a block as Generator
+
+```shell
+#TODO
+```
+
 ## Download Forging Enable Script
 
 ```shell
@@ -195,12 +201,6 @@ Script tasks:
 ```
 
 ## Download Rebuild From Snapshot Script
-
-```shell
-#TODO
-```
-
-## Wait for Validator to generate a block as Generator
 
 ```shell
 #TODO
