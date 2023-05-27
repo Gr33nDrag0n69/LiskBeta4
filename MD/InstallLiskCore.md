@@ -12,7 +12,7 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
 - [Fund the account](#fund-the-account)
 - [Wait for the lisk-core node to be sync.](#wait-for-the-lisk-core-node-to-be-sync)
 - [Validate the Account have the required funds.](#validate-the-account-have-the-required-funds)
-- [Create Validator Keys, Register Validator \& Generate HashOnion](#create-validator-keys-register-validator--generate-hashonion)
+- [Create \& Enable Validator](#create--enable-validator)
 - [Download Forging Enable Script](#download-forging-enable-script)
 - [Download Create Snapshot Script](#download-create-snapshot-script)
 - [Download Rebuild From Snapshot Script](#download-rebuild-from-snapshot-script)
@@ -124,7 +124,13 @@ Output should be >= 101000000000 ( 10 LSK for registration & 1000 LSK for self-s
 # Replace LSK address and run:
 lisk-core endpoint:invoke token_getBalance '{"address":"lsk3oe7hmf5k5e4f58zhmbouzx3t4v98sgsfuhwnw", "tokenID":"0200000000000000"}' | jq '.availableBalance' |  tr -d '"'
 ```
-## Create Validator Keys, Register Validator & Generate HashOnion
+## Create & Enable Validator
+
+* Create/Register Validator
+* Import Keys
+* Generate HashOnion
+* Enable block generation
+* SelfStake to increase the validator weight
 
 For some reasons the default config.json (or your custom-config) need to be edited to prevent a bug during keys import.
 
