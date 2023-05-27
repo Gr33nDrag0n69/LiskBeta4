@@ -33,12 +33,13 @@ LiskKeys_JsonData=$( cat ~/config/ValidatorKeys.json )
 ValidatorGeneratorKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.generatorKey' |  tr -d '"' )
 ValidatorBlsKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsKey' |  tr -d '"' )
 ValidatorProofOfPossession=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsProofOfPossession' |  tr -d '"' )
+
 JsonParams='{"name":"'"$ValidatorName"'","generatorKey":"'"$ValidatorGeneratorKey"'","blsKey":"'"$ValidatorBlsKey"'","proofOfPossession":"'"$ValidatorProofOfPossession"'"}'
-Transaction=$( lisk-core transaction:create pos registerValidator 1100000000 --params="$JsonParams" --passphrase "$ValidatorPassphrase" | jq '.transaction' |  tr -d '"' )
+RegisterValidatorTransaction=$( lisk-core transaction:create pos registerValidator 1100000000 --params="$JsonParams" --passphrase "$ValidatorPassphrase" | jq '.transaction' |  tr -d '"' )
 
 echo -e "2.2.2 Save Register Validator Transaction to '~/config/RegisterValidatorTransaction.json'"
 
-echo -e "$Transaction" > ~/config/RegisterValidatorTransaction.json
+echo -e "$RegisterValidatorTransaction" > ~/config/RegisterValidatorTransaction.json
 
 echo -e "2.2.3 Show '~/config/RegisterValidatorTransaction.json'"
 
@@ -46,7 +47,7 @@ cat ~/config/RegisterValidatorTransaction.json
 
 echo -e "2.3 Send the transaction"
 
-lisk-core transaction:send "$Transaction"
+lisk-core transaction:send "$RegisterValidatorTransaction"
 
 echo -e "Wait 25 seconds (For transaction to get included in a block)"
 
@@ -98,15 +99,47 @@ lisk-core generator:enable "$LiskAddress" --height=0 --max-height-generated=0 --
 
 #---
 
-echo -e "7.0 SelfStake 1000 LSK to increase the validator weight"
+echo -e "7.0 SelfStake to increase the validator weight"
 
+echo -e "7.1.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)"
+
+JsonParams='{"stakes":[{"validatorAddress":"'"$LiskAddress"'","amount":100000000000}]}'
+SelfStakeTransaction=$( lisk-core transaction:create pos stake 100000000 --params="$JsonParams" --passphrase "$ValidatorPassphrase" | jq '.transaction' |  tr -d '"' )
+
+echo -e "7.1.2 Save SelfStake Transaction to '~/config/SelfStakeTransaction.json'"
+
+echo -e "$SelfStakeTransaction" > ~/config/SelfStakeTransaction.json
+
+echo -e "7.1.3 Show '~/config/SelfStakeTransaction.json'"
+
+cat ~/config/SelfStakeTransaction.json
+
+echo -e "7.2 Send the transaction"
+
+lisk-core transaction:send "$SelfStakeTransaction"
+
+echo -e "Wait 25 seconds (For transaction to get included in a block)"
+
+sleep 25
+
+echo -e "7.3.1 Save SelfStake validator details to '~/config/SelfStakeValidatorDetails.json'"
+
+JsonParams='{"address":"'"$LiskAddress"'"}'
+lisk-core endpoint:invoke pos_getValidator "$JsonParams" --pretty > ~/config/SelfStakeValidatorDetails.json
+
+echo -e "7.3.2 Show '~/config/SelfStakeValidatorDetails.json' content"
+
+cat ~/config/SelfStakeValidatorDetails.json
 
 #---
 
-
 echo ""
-echo "IMPORTANT: Save a copy of the file(s) under the  '~/config/' directory & delete them (for security) from the server once you feel safe you won't require them anymore."
+echo "IMPORTANT !!!"
+echo ""
+echo "In theory, from now on (The keys are imported on the nodes), you don't need the clear-text files on the server in the '~/config/' directory."
+echo ""
+echo "For security purpose, save a copy of the file(s) to a safe location & delete them from the server."
+echo "Make sure to backup them even if you leave them on the server since if you want to restore the server or use the validator on another node, you will need part of these informations."
 echo ""
 
 #---
-
