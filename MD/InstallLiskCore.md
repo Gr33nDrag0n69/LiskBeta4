@@ -184,9 +184,10 @@ Script tasks:
 
 ## Wait for Validator to generate a block as Generator
 
-```shell
-#TODO
-```
+* Open the account in Lisk Wallet.
+* Go to the validators section & search your validator name.
+* You should have the `standby` status.
+* Watch (after a while) that your status is `active` to confirm all went well.
 
 ## Download Forging Enable Script
 
