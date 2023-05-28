@@ -145,9 +145,9 @@ If you want to understand the process, use the [Official Documentation](https://
 You can also use this script that bundle all steps into a single command.
 
 ```shell
-curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-create-validator.sh -o ~/lisk-create-validator.sh
-chmod 700 ~/lisk-create-validator.sh
-~/lisk-create-validator.sh
+curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh -o ~/lisk-core4-create-validator.sh
+chmod 700 ~/lisk-core4-create-validator.sh
+~/lisk-core4-create-validator.sh
 ```
 
 Script tasks:
