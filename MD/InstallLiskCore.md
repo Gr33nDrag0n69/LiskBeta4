@@ -40,12 +40,6 @@ sudo ufw default allow outgoing
 # Static Management IP
 sudo ufw allow from "100.150.200.250/32"
 
-# DNS
-sudo ufw allow "53/udp"
-
-# Mail Server (Optional)
-sudo ufw allow "25/tcp"
-
 # Lisk-Core
 sudo ufw allow "7667/tcp"
 
