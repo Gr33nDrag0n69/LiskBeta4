@@ -5,8 +5,8 @@ Misc. stuff related to lisk-core v4 beta network.
 
 - [Disclaimer](#disclaimer)
 - [Links](#links)
-  - [Blog](#blog)
-  - [Documentation](#documentation)
+  - [Lisk.com Blog](#liskcom-blog)
+  - [Lisk.com Documentation](#liskcom-documentation)
   - [Wallets](#wallets)
   - [HowTo](#howto)
   - [Faucet](#faucet)
@@ -33,11 +33,11 @@ My experience on betanet won't be the same without your work.
 
 # Links
 
-## Blog
+## Lisk.com Blog
 
-* Lisk.com: [Launch of Betanet v6](https://lisk.com/blog/posts/launch-of-betanet-v6)
+* [Launch of Betanet v6](https://lisk.com/blog/posts/launch-of-betanet-v6)
 
-## Documentation
+## Lisk.com Documentation
 
 ```
 Please note that the following betanet specific information is not in the documentation:
@@ -46,11 +46,11 @@ Please note that the following betanet specific information is not in the docume
 * Port #: 7667
 ```
 
-* Lisk.com: [Lisk-Core v4](https://lisk.com/documentation/lisk-core/v4/index.html)
-  * Lisk.com: [Lisk-Core CLI](https://lisk.com/documentation/lisk-core/v4/core-cli.html)
-* Lisk.com: [Running a blockchain node](https://lisk.com/documentation/beta/run-blockchain/index.html)
-  * Lisk.com: [Prepare and Enable your Validator](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
-* Lisk.com: [Lisk-SDK v6](https://lisk.com/documentation/lisk-sdk/v6/index.html)
+* [Lisk-Core v4](https://lisk.com/documentation/lisk-core/v4/index.html)
+  * [Lisk-Core CLI](https://lisk.com/documentation/lisk-core/v4/core-cli.html)
+* [Running a blockchain node](https://lisk.com/documentation/beta/run-blockchain/index.html)
+  * [Prepare and Enable your Validator](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
+* [Lisk-SDK v6](https://lisk.com/documentation/lisk-sdk/v6/index.html)
 
 ## Wallets
 
