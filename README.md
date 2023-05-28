@@ -8,8 +8,7 @@ Misc. stuff related to lisk-core v4 beta network.
   - [Blog](#blog)
   - [Documentation](#documentation)
   - [Wallets](#wallets)
-  - [My Guides](#my-guides)
-  - [Community Guides](#community-guides)
+  - [HowTo](#howto)
   - [Faucet](#faucet)
   - [Public API Endpoints](#public-api-endpoints)
   - [Explorer](#explorer)
@@ -58,13 +57,9 @@ Please note that the following betanet specific information is not in the docume
 * [Lisk Desktop v3.0.0-beta.0](https://github.com/LiskHQ/lisk-desktop/releases/tag/v3.0.0-beta.0)
 * [Lisk Mobile v3.0.0-beta.0](https://github.com/LiskHQ/lisk-mobile/releases/tag/v3.0.0-beta.0)
 
-## My Guides
+## HowTo
 
-* [Install Lisk-Core 4 Beta 0](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
-
-## Community Guides
-
-Soon TM
+* Gr33nDrag0n [Install Lisk-Core 4 Beta 0](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
 
 ## Faucet
 
@@ -81,13 +76,14 @@ Soon TM
 
 ## Snapshot
 
-Soon TM
+* Gr33nDrag0n [beta4-snapshot.lisknode.io](https://beta4-snapshot.lisknode.io/)
 
 ## Scripts
 
 ### Bash / Server
 
-Soon TM
+* Gr33nDrag0n [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
+* Gr33nDrag0n [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
 
 ### PowerShell / HTTPS API
 
