@@ -3,6 +3,7 @@
 # Lisk-Core v4 Beta 0
 # Gr33nDrag0n v1.0 (2023-05-28)
 
+
 OUTPUT_DIRECTORY="$HOME/beta4-snapshot"
 OUTPUT_GZIP_FILENAME="blockchain.db.tar.gz"
 OUTPUT_GZIP_FILEPATH="$OUTPUT_DIRECTORY/$OUTPUT_GZIP_FILENAME"
