@@ -69,7 +69,7 @@ pm2 install pm2-logrotate
 pm2 set pm2-logrotate:max_size 100M
 
 # Download lisk-core configuration files for PM2
-curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/PM2/lisk-core4.firststart.pm2.json -o ~/lisk-core.pm2.json
+curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/PM2/lisk-core4.firststart.pm2.json -o ~/lisk-core4.pm2.json
 
 ```
 
@@ -77,7 +77,7 @@ curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/PM2/lisk-cor
 
 ```shell
 cat > ~/.bash_aliases << EOF_Alias_Config
-alias lisk-start='pm2 start ~/lisk-core.pm2.json'
+alias lisk-start='pm2 start ~/lisk-core4.pm2.json'
 alias lisk-stop='pm2 stop lisk-core'
 alias lisk-pm2logs='pm2 logs'
 EOF_Alias_Config
