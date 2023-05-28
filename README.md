@@ -77,7 +77,7 @@ Soon TM
 
 ## Explorer
 
-Soon TM
+* LiskScan.com (work in progress): [https://betanet.liskscan.com/](https://betanet.liskscan.com/)
 
 ## Snapshot
 
