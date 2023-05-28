@@ -84,6 +84,7 @@ Please note that the following betanet specific information is not in the docume
 
 * Gr33nDrag0n [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
 * Gr33nDrag0n [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
+* Gr33nDrag0n [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
 
 ### PowerShell / HTTPS API
 
