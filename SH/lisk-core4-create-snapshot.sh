@@ -25,7 +25,7 @@ mkdir -p "$OUTPUT_DIRECTORY"
 
 echo -e "$(now) Get Blockchain Height"
 
-NODEINFO_JSON=$( lisk-core system:node-info2 )
+NODEINFO_JSON=$( lisk-core system:node-info )
 
 if [ -z "$NODEINFO_JSON" ]; then
     echo  -e "$(now) ERROR: Node Info is invalid. Aborting..."
