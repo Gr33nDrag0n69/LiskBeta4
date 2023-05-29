@@ -28,7 +28,7 @@ LiskCoreBinaryFullPath="$HOME/lisk-core/bin/lisk-core"
 WaitDelay=0
 RetryDelay=180
 MaxRetry=20
-Debug=true
+Debug=false
 
 #------------------------------------------------------------------------------
 
