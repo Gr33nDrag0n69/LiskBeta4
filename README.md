@@ -79,6 +79,7 @@ Please note that the following betanet specific information is not in the docume
 To quickly explore the API endpoint, you can use this online tool I've built: [https://beta4-wsexplorer.lisknode.io/](https://beta4-wsexplorer.lisknode.io/)
 
 * Gr33nDrag0n - [wss://beta4-api.lisknode.io/rpc-ws](wss://beta4-api.lisknode.io/rpc-ws)
+* lemii [wss://betanet-api.lemii.dev/rpc-ws](wss://betanet-api.lemii.dev/rpc-ws)
 
 ### Lisk Core HTTP API
 
@@ -88,6 +89,8 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 ### Lisk Service API
 
 * Lisk.com - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
+* lemii - [https://betanet-service.lemii.dev/](https://betanet-service.lemii.dev)
+
 
 ## Explorer
 
