@@ -196,6 +196,12 @@ Script tasks:
 SCRIPTNAME="lisk-core4-rebuild-blockchain-from-snapshot.sh"
 curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
 chmod 0700 "$HOME/$SCRIPTNAME"
+
+cat >> "$HOME/.bash_aliases" << EOF_Alias_Config
+alias lisk-rebuild='~/$SCRIPTNAME'
+EOF_Alias_Config
+
+source "$HOME/.bashrc"
 ```
 
 ## Download/Install Generator Enable/Disable Scripts
@@ -208,4 +214,11 @@ chmod 0700 "$HOME/$SCRIPTNAME"
 SCRIPTNAME="lisk-core4-disable-generator.sh"
 curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
 chmod 0700 "$HOME/$SCRIPTNAME"
+
+cat >> "$HOME/.bash_aliases" << EOF_Alias_Config
+alias lisk-generator-enable='~/lisk-core4-enable-generator.sh'
+alias lisk-generator-disable='~/lisk-core4-disable-generator.sh'
+EOF_Alias_Config
+
+source "$HOME/.bashrc"
 ```
