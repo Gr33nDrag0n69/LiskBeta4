@@ -64,9 +64,11 @@ Please note that the following betanet specific information is not in the docume
 
 ## HowTo
 
-* Gr33nDrag0n [Install Lisk-Core 4 Beta 0](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
+* Gr33nDrag0n [Install Lisk-Core Beta4](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
 
 ## Faucet
+
+*If the faucet is down, you can always ask in #network channel of lisk discord server.*
 
 * Lisk.com - [BetaNet v4 Faucet](https://betanet-faucet.lisk.com/)
 
@@ -102,6 +104,8 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 * [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
 * [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
 * [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
+* [lisk-core4-enable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-enable-generator.sh)
+* [lisk-core4-disable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-disable-generator.sh)
 
 ### PowerShell / HTTPS API
 
