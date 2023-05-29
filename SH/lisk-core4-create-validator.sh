@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -e
 
-# Lisk-Core v4 Beta 0
+# Lisk-Core v4
 # Gr33nDrag0n v1.0 (2023-05-26)
 
 #---
