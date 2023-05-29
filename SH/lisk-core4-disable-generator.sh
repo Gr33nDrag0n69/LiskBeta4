@@ -16,7 +16,7 @@ for Validator in $(echo "$GeneratorStatus" | jq -rc '.info.status[]'); do
     if [ "$GeneratorEnabled" = true ]
     then
         while true; do
-            read -rp "Disable 'Generator Mode' on $ValidatorName ? y / n" yn
+            read -rp "Disable 'Generator Mode' on $ValidatorName ? y/n :" yn
             case $yn in
 
                 [Yy]* )
