@@ -14,9 +14,7 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
 - [Validate the Account have the required funds.](#validate-the-account-have-the-required-funds)
 - [Create \& Enable Validator](#create--enable-validator)
 - [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
-- [Download Forging Enable Script](#download-forging-enable-script)
-- [Download Create Snapshot Script](#download-create-snapshot-script)
-- [Download Rebuild From Snapshot Script](#download-rebuild-from-snapshot-script)
+- [Download/Install Rebuild From Snapshot Script](#downloadinstall-rebuild-from-snapshot-script)
 
 ## Install Base
 
@@ -187,20 +185,9 @@ Script tasks:
 * You should have the `standby` status.
 * Watch (after a while) that your status is `active` to confirm all went well.
 
-## Download Forging Enable Script
+## Download/Install Rebuild From Snapshot Script
 
 ```shell
-#TODO
-```
-
-## Download Create Snapshot Script
-
-```shell
-#TODO
-```
-
-## Download Rebuild From Snapshot Script
-
-```shell
-#TODO
+curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh -o ~/lisk-core4-rebuild-blockchain-from-snapshot.sh
+chmod 700 ~/lisk-core4-rebuild-blockchain-from-snapshot.sh
 ```
