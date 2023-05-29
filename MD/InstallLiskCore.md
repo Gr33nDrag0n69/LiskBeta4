@@ -15,6 +15,7 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
 - [Create \& Enable Validator](#create--enable-validator)
 - [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
 - [Download/Install Rebuild From Snapshot Script](#downloadinstall-rebuild-from-snapshot-script)
+- [Download/Install Generator Enable/Disable Scripts](#downloadinstall-generator-enabledisable-scripts)
 
 ## Install Base
 
@@ -188,6 +189,19 @@ Script tasks:
 ## Download/Install Rebuild From Snapshot Script
 
 ```shell
-curl https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh -o ~/lisk-core4-rebuild-blockchain-from-snapshot.sh
-chmod 700 ~/lisk-core4-rebuild-blockchain-from-snapshot.sh
+SCRIPTNAME="lisk-core4-rebuild-blockchain-from-snapshot.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+```
+
+## Download/Install Generator Enable/Disable Scripts
+
+```shell
+SCRIPTNAME="lisk-core4-enable-generator.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+
+SCRIPTNAME="lisk-core4-disable-generator.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
 ```
