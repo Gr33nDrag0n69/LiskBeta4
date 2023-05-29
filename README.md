@@ -11,6 +11,9 @@ Misc. stuff related to lisk-core v4 beta network.
   - [HowTo](#howto)
   - [Faucet](#faucet)
   - [Public API Endpoints](#public-api-endpoints)
+    - [Lisk Core WS API](#lisk-core-ws-api)
+    - [Lisk Core HTTP API](#lisk-core-http-api)
+    - [Lisk Service API](#lisk-service-api)
   - [Explorer](#explorer)
   - [Snapshot](#snapshot)
   - [Scripts](#scripts)
@@ -67,12 +70,23 @@ Please note that the following betanet specific information is not in the docume
 
 ## Public API Endpoints
 
-* Lisk.com - Lisk Core API: [https://betanet.lisk.com/api/v3/](https://betanet.lisk.com/api/v3/)
-* Lisk.com - Lisk Service API: [https://betanet-service.lisk.com/api/v3/](https://betanet-service.lisk.com/api/v3/)
+### Lisk Core WS API
+
+* Lisk.com - [https://betanet.lisk.com/rpc-ws](https://betanet.lisk.com/rpc-ws)
+* Gr33nDrag0n - [https://beta4-api.lisknode.io/rpc-ws](https://beta4-api.lisknode.io/rpc-ws)
+
+### Lisk Core HTTP API
+
+* Lisk.com - [https://betanet.lisk.com/rpc](https://betanet.lisk.com/rpc)
+* Gr33nDrag0n - [https://beta4-api.lisknode.io/rpc](https://beta4-api.lisknode.io/rpc)
+
+### Lisk Service API
+
+* Lisk.com - [https://betanet-service.lisk.com/api/v3/](https://betanet-service.lisk.com/api/v3/)
 
 ## Explorer
 
-* LiskScan.com (work in progress): [https://betanet.liskscan.com/](https://betanet.liskscan.com/)
+* LiskScan.com (work in progress) - [https://betanet.liskscan.com/](https://betanet.liskscan.com/)
 
 ## Snapshot
 
@@ -82,9 +96,9 @@ Please note that the following betanet specific information is not in the docume
 
 ### Bash / Server
 
-* Gr33nDrag0n [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
-* Gr33nDrag0n [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
-* Gr33nDrag0n [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
+* [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
+* [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
+* [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
 
 ### PowerShell / HTTPS API
 
