@@ -5,19 +5,11 @@
 
 #---
 
-###############################################################################
+# TODO !! delegate should always pick the local data, unless its somehow lower than on service
+# Using lisk service, validate the 3 critical values are similar.
+# If not, show a warning!
 
-#lisk-core generator:enable "$LiskAddress" --height=0 --max-height-generated=0 --max-height-prevoted=0 --password "$ValidatorPassword"
-
-# TODO for v1.5 (2023-05-03):
-#response=$(curl -s https://service.lisk.com/api/v2/blocks?generatorUsername=gr33ndrag0n&limit=1)
-#height=$(echo $response | jq -r '.data[0].height')
-#maxHeightPreviouslyForged=$(echo $response | jq -r '.data[0].maxHeightPreviouslyForged')
-#maxHeightPrevoted=$(echo $response | jq -r '.data[0].maxHeightPrevoted')
-#echo "$height $maxHeightPreviouslyForged $maxHeightPrevoted"
-# Note: delegate should always pick the local data, unless its somehow lower than on service
-
-###############################################################################
+#---
 
 # Default Configuration
 
