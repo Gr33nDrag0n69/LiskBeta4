@@ -46,11 +46,13 @@ My experience on betanet won't be the same without your work.
 Please note that the following betanet specific information is not in the documentation:
 
 * OS: Ubuntu 20
-* Port #: 7667
+* Default Lisk-Core Port: TCP 7667
+* Default Lisk-Core WS & HTTP API Port: TCP 7887
 ```
 
 * [Lisk-Core v4](https://lisk.com/documentation/lisk-core/v4/index.html)
   * [Lisk-Core CLI](https://lisk.com/documentation/lisk-core/v4/core-cli.html)
+  * [Lisk-Core API](https://lisk.com/documentation/beta/api/lisk-node-rpc.html)
 * [Running a blockchain node](https://lisk.com/documentation/beta/run-blockchain/index.html)
   * [Prepare and Enable your Validator](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
 * [Lisk-SDK v6](https://lisk.com/documentation/lisk-sdk/v6/index.html)
@@ -72,8 +74,9 @@ Please note that the following betanet specific information is not in the docume
 
 ### Lisk Core WS API
 
-* Lisk.com - [https://betanet.lisk.com/rpc-ws](https://betanet.lisk.com/rpc-ws)
-* Gr33nDrag0n - [https://beta4-api.lisknode.io/rpc-ws](https://beta4-api.lisknode.io/rpc-ws)
+To quickly explore the API endpoint, you can use this online tool I've built: [https://beta4-wsexplorer.lisknode.io/](https://beta4-wsexplorer.lisknode.io/)
+
+* Gr33nDrag0n - [wss://beta4-api.lisknode.io/rpc-ws](wss://beta4-api.lisknode.io/rpc-ws)
 
 ### Lisk Core HTTP API
 
@@ -82,7 +85,7 @@ Please note that the following betanet specific information is not in the docume
 
 ### Lisk Service API
 
-* Lisk.com - [https://betanet-service.lisk.com/api/v3/](https://betanet-service.lisk.com/api/v3/)
+* Lisk.com - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
 
 ## Explorer
 
