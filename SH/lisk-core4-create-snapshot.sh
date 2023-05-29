@@ -3,6 +3,8 @@
 # Lisk-Core v4
 # Gr33nDrag0n v1.0 (2023-05-28)
 
+#---
+
 # Can be edited
 
 OUTPUT_DIRECTORY="$HOME/beta4-snapshot"
