@@ -125,7 +125,8 @@ lisk-core endpoint:invoke token_getBalance '{"address":"lsk3oe7hmf5k5e4f58zhmbou
 * Enable block generation
 * SelfStake to increase the validator weight
 
-For some reasons the default config.json (or your custom-config) need to be edited to prevent a bug during keys import.
+By default, lisk-core doesn't allow access to the generator & random Endpoints. It's a good default since a public server should not allow this.
+Since here we are creating a private validator node, you must edit the default config.json (or your custom-config) to prevent a problem during keys import.
 
 **After the config file is fixed, don't forget to stop/start the node to apply the new config file before proceeding with the next steps!**
 
