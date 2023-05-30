@@ -142,7 +142,7 @@ vi ~/.lisk/lisk-core/config/config.json
 
 If you want to understand the process, use the [Official Documentation](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
 
-You can also use this script that bundle all steps into a single command.
+You can also use this [script](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh) that bundle all steps into a single command.
 
 ```shell
 # Download
