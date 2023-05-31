@@ -22,8 +22,8 @@ read -rs ValidatorPassword
 OutputDirectory="$HOME/$ValidatorName-validator-backup/"
 mkdir "$OutputDirectory"
 
-ValidatorKeys_JsonFile=$OutputDirectory+'keys.json'
-HashOnionSeeds_JsonFile=$OutputDirectory+'hash-onion-seeds.json'
+ValidatorKeys_JsonFile=$OutputDirectory'keys.json'
+HashOnionSeeds_JsonFile=$OutputDirectory'hash-onion-seeds.json'
 
 #---
 
