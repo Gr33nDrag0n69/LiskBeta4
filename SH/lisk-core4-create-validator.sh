@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Lisk-Core v4
-# Gr33nDrag0n v1.0 (2023-05-26)
+# Gr33nDrag0n v1.1 (2023-05-30)
 
 #---
 
@@ -19,31 +19,33 @@ read -rs ValidatorPassword
 
 #---
 
-echo -e "2.1.1 Create the validator keys & save output to '~/config/ValidatorKeys.json'"
+OutputDirectory="$HOME/$ValidatorName-validator-backup/"
+mkdir "$OutputDirectory"
 
-lisk-core keys:create --output ~/config/ValidatorKeys.json --passphrase "$ValidatorPassphrase" --password "$ValidatorPassword"
+ValidatorKeys_JsonFile=$OutputDirectory+'keys.json'
+HashOnionSeeds_JsonFile=$OutputDirectory+'hash-onion-seeds.json'
 
-echo -e "2.1.2 Show '~/config/ValidatorKeys.json' content"
+#---
 
-cat ~/config/ValidatorKeys.json
+echo -e "2.1.1 Create the validator keys & save output to '$ValidatorKeys_JsonFile'"
 
-echo -e "2.2.1 Create the Register Validator transaction"
+#TODO: ADD A CHECK FOR LEGACY ADDRESS ?
 
-LiskKeys_JsonData=$( cat ~/config/ValidatorKeys.json )
+lisk-core keys:create --output "$ValidatorKeys_JsonFile" --passphrase "$ValidatorPassphrase" --password "$ValidatorPassword"
+
+echo -e "2.1.2 Show '$ValidatorKeys_JsonFile' content"
+
+cat "$ValidatorKeys_JsonFile"
+
+echo -e "2.2 Create the Register Validator transaction"
+
+LiskKeys_JsonData=$( cat "$ValidatorKeys_JsonFile" )
 ValidatorGeneratorKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.generatorKey' |  tr -d '"' )
 ValidatorBlsKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsKey' |  tr -d '"' )
 ValidatorProofOfPossession=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsProofOfPossession' |  tr -d '"' )
 
 JsonParams='{"name":"'"$ValidatorName"'","generatorKey":"'"$ValidatorGeneratorKey"'","blsKey":"'"$ValidatorBlsKey"'","proofOfPossession":"'"$ValidatorProofOfPossession"'"}'
 RegisterValidatorTransaction=$( lisk-core transaction:create pos registerValidator 1100000000 --params="$JsonParams" --passphrase "$ValidatorPassphrase" | jq '.transaction' |  tr -d '"' )
-
-echo -e "2.2.2 Save Register Validator Transaction to '~/config/RegisterValidatorTransaction.json'"
-
-echo -e "$RegisterValidatorTransaction" > ~/config/RegisterValidatorTransaction.json
-
-echo -e "2.2.3 Show '~/config/RegisterValidatorTransaction.json'"
-
-cat ~/config/RegisterValidatorTransaction.json
 
 echo -e "2.3 Send the transaction"
 
@@ -53,28 +55,20 @@ echo -e "Wait 25 seconds (For transaction to get included in a block)"
 
 sleep 25
 
-echo -e "2.4.1 Save validator details to '~/config/ValidatorDetails.json'"
+echo -e "2.4 Show Validator Details (Post-Registration)"
 
 JsonParams='{"address":"'"$LiskAddress"'"}'
-lisk-core endpoint:invoke pos_getValidator "$JsonParams" --pretty > ~/config/ValidatorDetails.json
-
-echo -e "2.4.2 Show '~/config/ValidatorDetails.json' content"
-
-cat ~/config/ValidatorDetails.json
+lisk-core endpoint:invoke pos_getValidator "$JsonParams" --pretty
 
 #---
 
 echo -e "3.0 Import the validator keys"
 
-lisk-core keys:import --file-path ~/config/ValidatorKeys.json
+lisk-core keys:import --file-path "$ValidatorKeys_JsonFile"
 
-echo -e "3.1.1 Save Generator Imported Keys to '~/config/GeneratorImportedKeys.json'"
+echo -e "3.1 Show Generator Imported Keys"
 
-lisk-core endpoint:invoke generator_getAllKeys --pretty > ~/config/GeneratorImportedKeys.json
-
-echo -e "3.1.2 Show '~/config/GeneratorImportedKeys.json' content"
-
-cat ~/config/GeneratorImportedKeys.json
+lisk-core endpoint:invoke generator_getAllKeys --pretty
 
 #---
 
@@ -83,13 +77,13 @@ echo -e "4.0 Set the hash onion"
 JsonParams='{"address":"'"$LiskAddress"'"}'
 lisk-core endpoint:invoke random_setHashOnion "$JsonParams"
 
-echo -e "4.1.1 Save hash onion seeds to '~/config/HashOnionSeeds.json'"
+echo -e "4.1.1 Save hash onion seeds to '$HashOnionSeeds_JsonFile'"
 
-lisk-core endpoint:invoke random_getHashOnionSeeds --pretty > ~/config/HashOnionSeeds.json
+lisk-core endpoint:invoke random_getHashOnionSeeds --pretty > "$HashOnionSeeds_JsonFile"
 
-echo -e "4.1.2 Show '~/config/HashOnionSeeds.json' content"
+echo -e "4.1.2 Show '$HashOnionSeeds_JsonFile' content"
 
-cat ~/config/HashOnionSeeds.json
+cat "$HashOnionSeeds_JsonFile"
 
 #---
 
@@ -101,18 +95,10 @@ lisk-core generator:enable "$LiskAddress" --height=0 --max-height-generated=0 --
 
 echo -e "7.0 SelfStake to increase the validator weight"
 
-echo -e "7.1.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)"
+echo -e "7.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)"
 
 JsonParams='{"stakes":[{"validatorAddress":"'"$LiskAddress"'","amount":100000000000}]}'
 SelfStakeTransaction=$( lisk-core transaction:create pos stake 100000000 --params="$JsonParams" --passphrase "$ValidatorPassphrase" | jq '.transaction' |  tr -d '"' )
-
-echo -e "7.1.2 Save SelfStake Transaction to '~/config/SelfStakeTransaction.json'"
-
-echo -e "$SelfStakeTransaction" > ~/config/SelfStakeTransaction.json
-
-echo -e "7.1.3 Show '~/config/SelfStakeTransaction.json'"
-
-cat ~/config/SelfStakeTransaction.json
 
 echo -e "7.2 Send the transaction"
 
@@ -122,26 +108,16 @@ echo -e "Wait 25 seconds (For transaction to get included in a block)"
 
 sleep 25
 
-echo -e "7.3.1 Save SelfStake validator details to '~/config/SelfStakeValidatorDetails.json'"
+echo -e "7.3 Show Validator Details (Post-SelfStake)"
 
 JsonParams='{"address":"'"$LiskAddress"'"}'
-lisk-core endpoint:invoke pos_getValidator "$JsonParams" --pretty > ~/config/SelfStakeValidatorDetails.json
-
-echo -e "7.3.2 Show '~/config/SelfStakeValidatorDetails.json' content"
-
-cat ~/config/SelfStakeValidatorDetails.json
+lisk-core endpoint:invoke pos_getValidator "$JsonParams" --pretty
 
 #---
 
 echo ""
-echo "IMPORTANT !!!"
+echo "IMPORTANT !!! Save a copy of '$OutputDirectory' to a safe location & delete it from the server."
 echo ""
-echo "In theory, from now on (The keys are imported on the nodes), you don't need the clear-text files on the server in the '~/config/' directory."
-echo ""
-ls -l ~/config/
-echo ""
-echo "For security purpose, save a copy of the file(s) to a safe location & delete them from the server."
-echo "Make sure to backup them even if you leave them on the server since if you want to restore the server or use the validator on another node, you will need part of these informations."
-echo ""
+ls -l "$OutputDirectory"
 
 #---
