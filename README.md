@@ -83,12 +83,13 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 
 ### Lisk Core HTTP API
 
-* Lisk.com - [https://betanet.lisk.com/rpc](https://betanet.lisk.com/rpc)
-* Gr33nDrag0n - [https://beta4-api.lisknode.io/rpc](https://beta4-api.lisknode.io/rpc)
-
+* lisk.com - [https://betanet.lisk.com/rpc](https://betanet.lisk.com/rpc)
+* gr33ndrag0n - [https://beta4-api.lisknode.io/rpc](https://beta4-api.lisknode.io/rpc)
+* lemii - [https://betanet-api.lemii.dev/rpc](https://betanet-api.lemii.dev/rpc)
+*
 ### Lisk Service API
 
-* Lisk.com - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
+* lisk.com - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
 * lemii - [https://betanet-service.lemii.dev/](https://betanet-service.lemii.dev)
 
 
