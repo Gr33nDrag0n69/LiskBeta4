@@ -156,31 +156,23 @@ chmod 0700 "$HOME/$SCRIPTNAME"
 
 Script tasks:
 
-* 1.0 Nothing to do
-* 2.1.1 Create the validator keys & save output to '~/config/ValidatorKeys.json'
-* 2.1.2 Show '~/config/ValidatorKeys.json' content
-* 2.2.1 Create the Register Validator transaction
-* 2.2.2 Save Register Validator Transaction to '~/config/RegisterValidatorTransaction.json'
-* 2.2.3 Show '~/config/RegisterValidatorTransaction.json'
-* 2.3 Send the transaction
-* Wait 25 seconds (For transaction to get included in a block)
-* 2.4 Save validator details to '~/config/ValidatorDetails.json'
+* 2.0 Register Validator
+  * 2.1.1 Create the validator keys & save output to '$ValidatorKeys_JsonFile'
+  * 2.1.2 Show '$ValidatorKeys_JsonFile' content
+  * 2.2 Create the Register Validator transaction
+  * 2.3 Send the transaction
+  * Wait 25 seconds (For transaction to get included in a block)
+  * 2.4 Show Validator Details (Post-Registration)
 * 3.0 Import the validator keys
-* 3.1.1 Save Generator Imported Keys to '~/config/GeneratorImportedKeys.json'
-* 3.1.2 Show '~/config/GeneratorImportedKeys.json' content
+  * 3.1 Show Generator Imported Keys
 * 4.0 Set the hash onion
-* 4.1.1 Save hash onion seeds to '~/config/HashOnionSeeds.json'
-* 4.1.2 Show '~/config/HashOnionSeeds.json' content
-* 5.0 Nothing to do
+  * 4.1.1 Save hash onion seeds to '$HashOnionSeeds_JsonFile'
+  * 4.1.2 Show '$HashOnionSeeds_JsonFile' content
 * 6.0 Enable block generation for the first time (Using 0 0 0)
 * 7.0 SelfStake to increase the validator weight
-* 7.1.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)
-* 7.1.2 Save SelfStake Transaction to '~/config/SelfStakeTransaction.json'
-* 7.1.3 Show '~/config/SelfStakeTransaction.json'
-* 7.2 Send the transaction
-* Wait 25 seconds (For transaction to get included in a block)
-* 7.3.1 Save SelfStake validator details to '~/config/SelfStakeValidatorDetails.json'
-* 7.3.2 Show '~/config/SelfStakeValidatorDetails.json' content
+  * 7.1 Create the SelfStake Transaction (1000 LSK SelfStake using 1 LSK for Fees)
+  * 7.2 Send the transaction
+  * 7.3 Show Validator Details (Post-SelfStake)
 
 ## Wait for Validator to generate a block as Generator
 
