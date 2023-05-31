@@ -5,8 +5,8 @@ Misc. stuff related to lisk-core v4 beta network.
 
 - [Disclaimer](#disclaimer)
 - [Links](#links)
-  - [Lisk.com Blog](#liskcom-blog)
-  - [Lisk.com Documentation](#liskcom-documentation)
+  - [Lisk Blog](#lisk-blog)
+  - [Lisk Documentation](#lisk-documentation)
   - [Wallets](#wallets)
   - [HowTo](#howto)
   - [Faucet](#faucet)
@@ -18,6 +18,7 @@ Misc. stuff related to lisk-core v4 beta network.
   - [Snapshot](#snapshot)
   - [Scripts](#scripts)
     - [Bash / Server](#bash--server)
+    - [NodeJS](#nodejs)
     - [PowerShell / HTTPS API](#powershell--https-api)
   - [Misc. File](#misc-file)
 
@@ -36,11 +37,11 @@ My experience on betanet won't be the same without your work.
 
 # Links
 
-## Lisk.com Blog
+## Lisk Blog
 
 * [Launch of Betanet v6](https://lisk.com/blog/posts/launch-of-betanet-v6)
 
-## Lisk.com Documentation
+## Lisk Documentation
 
 ```
 Please note that the following betanet specific information is not in the documentation:
@@ -53,6 +54,7 @@ Please note that the following betanet specific information is not in the docume
 * [Lisk-Core v4](https://lisk.com/documentation/lisk-core/v4/index.html)
   * [Lisk-Core CLI](https://lisk.com/documentation/lisk-core/v4/core-cli.html)
   * [Lisk-Core API](https://lisk.com/documentation/beta/api/lisk-node-rpc.html)
+* [Lisk-Service v0.7.0 API Documentation](https://github.com/LiskHQ/lisk-service/blob/v0.7.0-beta.1/docs/api/version3.md#lisk-service-api-documentation)
 * [Running a blockchain node](https://lisk.com/documentation/beta/run-blockchain/index.html)
   * [Prepare and Enable your Validator](https://lisk.com/documentation/beta/run-blockchain/become-a-validator.html)
 * [Lisk-SDK v6](https://lisk.com/documentation/lisk-sdk/v6/index.html)
@@ -64,7 +66,7 @@ Please note that the following betanet specific information is not in the docume
 
 ## HowTo
 
-* Gr33nDrag0n [Install Lisk-Core Beta4](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
+* gr33ndrag0n [Install Lisk-Core Beta4](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
 
 ## Faucet
 
@@ -83,19 +85,18 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 
 ### Lisk Core HTTP API
 
-* lisk.com - [https://betanet.lisk.com/rpc](https://betanet.lisk.com/rpc)
+* lisk - [https://betanet.lisk.com/rpc](https://betanet.lisk.com/rpc)
 * gr33ndrag0n - [https://beta4-api.lisknode.io/rpc](https://beta4-api.lisknode.io/rpc)
 * lemii - [https://betanet-api.lemii.dev/rpc](https://betanet-api.lemii.dev/rpc)
 
 ### Lisk Service API
 
-* lisk.com - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
+* lisk - [https://betanet-service.lisk.com/](https://betanet-service.lisk.com)
 * lemii - [https://betanet-service.lemii.dev/](https://betanet-service.lemii.dev)
-
 
 ## Explorer
 
-* LiskScan.com (work in progress) - [https://betanet.liskscan.com/](https://betanet.liskscan.com/)
+* liskscan - [https://betanet.liskscan.com/](https://betanet.liskscan.com/)
 
 ## Snapshot
 
@@ -105,11 +106,15 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 
 ### Bash / Server
 
-* [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
-* [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
-* [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
-* [lisk-core4-enable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-enable-generator.sh)
-* [lisk-core4-disable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-disable-generator.sh)
+* gr33ndrag0n - [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
+* gr33ndrag0n - [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
+* gr33ndrag0n - [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
+* gr33ndrag0n - [lisk-core4-enable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-enable-generator.sh)
+* gr33ndrag0n - [lisk-core4-disable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-disable-generator.sh)
+
+### NodeJS
+
+* liskscan - Lisk Service Client - [https://www.npmjs.com/package/@liskscan/lisk-service-client](https://www.npmjs.com/package/@liskscan/lisk-service-client)
 
 ### PowerShell / HTTPS API
 
