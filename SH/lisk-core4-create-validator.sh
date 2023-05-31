@@ -29,7 +29,7 @@ HashOnionSeeds_JsonFile=$OutputDirectory'hash-onion-seeds.json'
 
 echo -e "2.1.1 Create the validator keys & save output to '$ValidatorKeys_JsonFile'"
 
-#TODO: ADD A CHECK FOR LEGACY ADDRESS ?
+#TODO: SUPPORT LEGACY ADDRESS from passphrase ! (For now I have no idea how to specify correct derivation path)
 
 lisk-core keys:create --output "$ValidatorKeys_JsonFile" --passphrase "$ValidatorPassphrase" --password "$ValidatorPassword"
 
