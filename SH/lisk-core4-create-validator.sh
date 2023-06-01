@@ -42,9 +42,9 @@ LiskKeys_JsonData=$( cat "$ValidatorKeys_JsonFile" )
 GeneratedKeysAssociatedAddress=$( echo "$LiskKeys_JsonData" | jq '.keys[0].address' |  tr -d '"' )
 
 if [ "$LiskAddress" != "$GeneratedKeysAssociatedAddress" ]; then
-    echo -e "Error: The generated keys address don't match provided address."
+    echo -e "Error: The generated keys address doesn't match provided address."
     echo -e "If you are using a legacy address/passphrase, it's normal, it's not supported yet by this tool and won't be until 'keys:create' allows legacy derivation path."
-    echo -e "If you are using a new address/phasphrase generated with lisk-core v4, it's NOT normal, Check your address again in lisk wallet using the passphrase and try again."
+    echo -e "If you are using a new address/passphrase generated with lisk-core v4, it's NOT normal, Check your address again in lisk wallet using the passphrase and try again."
     exit 1
 fi
 
