@@ -5,7 +5,7 @@
 Once your 2nd server lisk-core node is functional and in sync with network.
 These are the commands to quickly copy encrypted keys & hash onion seeds on the backup node.
 Take note that even if the "Last Block Info" are also transferred, they will be invalid (on server 2) as soon as another block is generated on server 1.
-The process to safely switch active server (after this procedure will be done) is available [here]().
+To Switch Validator/Generator Active Node (after this procedure will be done) use the guide [here](./SwitchGeneratorActiveNode.md).
 
 ## Get Required Files from **Server 1**
 
