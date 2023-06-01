@@ -55,7 +55,9 @@ lisk-core endpoint:invoke random_getHashOnionSeeds --pretty
 
 6. Import HashOnionSeeds
 
-Note: If you get ` ›   Error: Response not received in 3000ms` message(s) during import, don't stress, it probably worked anyway. Just go to step 7 anyway to check updated local config before anything else.
+**Note:**
+If you get ` ›   Error: Response not received in 3000ms` message(s) during import, don't stress, it probably worked anyway.
+Just go to step 7 and check updated local config.
 
 ```shell
 for JsonParams in $( cat "$HOME/server1-hashonionseeds-export.json" | jq -rc '.seeds[]'); do
