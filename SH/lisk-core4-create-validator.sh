@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Lisk-Core v4
-# Gr33nDrag0n v1.1 (2023-05-30)
+# Gr33nDrag0n v1.1.1 (2023-06-01)
 
 #---
 
@@ -29,8 +29,6 @@ HashOnionSeeds_JsonFile=$OutputDirectory'hash-onion-seeds.json'
 
 echo -e "2.1.1 Create the validator keys & save output to '$ValidatorKeys_JsonFile'"
 
-#TODO: SUPPORT LEGACY ADDRESS from passphrase ! (For now I have no idea how to specify correct derivation path)
-
 lisk-core keys:create --output "$ValidatorKeys_JsonFile" --passphrase "$ValidatorPassphrase" --password "$ValidatorPassword"
 
 echo -e "2.1.2 Show '$ValidatorKeys_JsonFile' content"
@@ -40,6 +38,16 @@ cat "$ValidatorKeys_JsonFile"
 echo -e "2.2 Create the Register Validator transaction"
 
 LiskKeys_JsonData=$( cat "$ValidatorKeys_JsonFile" )
+
+GeneratedKeysAssociatedAddress=$( echo "$LiskKeys_JsonData" | jq '.keys[0].address' |  tr -d '"' )
+
+if [ "$LiskAddress" != "$GeneratedKeysAssociatedAddress" ]; then
+    echo -e "Error: The generated keys address don't match provided address."
+    echo -e "If you are using a legacy address/passphrase, it's normal, it's not supported yet by this tool and won't be until 'keys:create' allows legacy derivation path."
+    echo -e "If you are using a new address/phasphrase generated with lisk-core v4, it's NOT normal, Check your address again in lisk wallet using the passphrase and try again."
+    exit 1
+fi
+
 ValidatorGeneratorKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.generatorKey' |  tr -d '"' )
 ValidatorBlsKey=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsKey' |  tr -d '"' )
 ValidatorProofOfPossession=$( echo "$LiskKeys_JsonData" | jq '.keys[0].plain.blsProofOfPossession' |  tr -d '"' )
