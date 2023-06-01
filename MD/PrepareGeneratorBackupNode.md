@@ -15,9 +15,15 @@ lisk-core generator:export -o "$HOME/server1-generator-export.json"
 lisk-core endpoint:invoke random_getHashOnionSeeds > "$HOME/server1-hashonionseeds-export.json"
 ```
 
-2. Download files.
+2. Show File Content & Inspect all look fine.
+```shell
+cat "$HOME/server1-generator-export.json"
+cat "$HOME/server1-hashonionseeds-export.json"
+```
 
-3. Delete files.
+3. Download files.
+
+4. Delete files.
 ```shell
 rm -f "$HOME/server1-generator-export.json"
 rm -f "$HOME/server1-hashonionseeds-export.json"
@@ -25,14 +31,29 @@ rm -f "$HOME/server1-hashonionseeds-export.json"
 
 ## Configure **Server 2**
 
-1. Upload files
+1. Upload exported files to HOME directory.
 
-2. Import Generator Info (Encrypted Keys & Last Block Info)
+2. Show current generator info
+```shell
+lisk-core generator:export
+```
+
+3. Import Generator Info (Encrypted Keys & Last Block Info)
 ```shell
 lisk-core generator:import -f "$HOME/server1-generator-export.json"
 ```
 
-3. Import HashOnionSeeds
+4. Show updated generator info
+```shell
+lisk-core generator:export
+```
+
+5. Show current HashOnionSeeds
+```shell
+lisk-core endpoint:invoke random_getHashOnionSeeds --pretty
+```
+
+6. Import HashOnionSeeds
 
 ```shell
 for JsonParams in $( cat "$HOME/server1-hashonionseeds-export.json" | jq -rc '.seeds[]'); do
@@ -40,8 +61,17 @@ for JsonParams in $( cat "$HOME/server1-hashonionseeds-export.json" | jq -rc '.s
 done
 ```
 
-4. Delete file.
+7. Show current HashOnionSeeds
+```shell
+lisk-core endpoint:invoke random_getHashOnionSeeds --pretty
+```
+
+8. Delete file.
 ```shell
 rm -f "$HOME/server1-generator-export.json"
 rm -f "$HOME/server1-hashonionseeds-export.json"
 ```
+
+## Other Task(s)
+
+* Delete the copy of the files on the computer you used to transfer them.
