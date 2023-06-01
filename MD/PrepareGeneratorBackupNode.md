@@ -9,7 +9,7 @@ To Switch Validator/Generator Active Node (after this procedure will be done) us
 
 ## Get Required Files from **Server 1**
 
-1. Export Generator Info.
+1. Export Generator Info & Hash Onion Seeds
 ```shell
 lisk-core generator:export -o "$HOME/server1-generator-export.json"
 lisk-core endpoint:invoke random_getHashOnionSeeds > "$HOME/server1-hashonionseeds-export.json"
