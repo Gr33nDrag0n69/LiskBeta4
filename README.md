@@ -67,6 +67,7 @@ Please note that the following betanet specific information is not in the docume
 ## HowTo
 
 * gr33ndrag0n [Install Lisk-Core Beta4](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/InstallLiskCore.md)
+* gr33ndrag0n [Prepare a backup node for Validator/Generator](https://github.com/Gr33nDrag0n69/LiskBeta4/blob/main/MD/PrepareGeneratorBackupNode.md)
 
 ## Faucet
 
