@@ -19,8 +19,7 @@ Misc. stuff related to lisk-core v4 beta network.
   - [Scripts](#scripts)
     - [Bash / Server](#bash--server)
     - [NodeJS](#nodejs)
-    - [PowerShell / HTTPS API](#powershell--https-api)
-  - [Misc. File](#misc-file)
+    - [PowerShell 7](#powershell-7)
 
 # Disclaimer
 
@@ -121,10 +120,6 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 
 * liskscan - Lisk Service Client - [https://www.npmjs.com/package/@liskscan/lisk-service-client](https://www.npmjs.com/package/@liskscan/lisk-service-client)
 
-### PowerShell / HTTPS API
+### PowerShell 7
 
-Soon TM
-
-## Misc. File
-
-Soon TM
+* [LWD4 - LiskWatchDog4](https://github.com/Gr33nDrag0n69/LWD4)
