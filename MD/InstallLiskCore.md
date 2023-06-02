@@ -12,10 +12,14 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
 - [Fund the account](#fund-the-account)
 - [Wait for the lisk-core node to be sync.](#wait-for-the-lisk-core-node-to-be-sync)
 - [Validate the Account have the required funds.](#validate-the-account-have-the-required-funds)
+- [Download/Install LiskBeta4 Scripts](#downloadinstall-liskbeta4-scripts)
+  - [Create Validator](#create-validator)
+  - [Rebuild From Snapshot](#rebuild-from-snapshot)
+  - [Enable / Disable Generator Mode](#enable--disable-generator-mode)
+  - [Generator Info](#generator-info)
+  - [Create CMD Alias (Optional)](#create-cmd-alias-optional)
 - [Create \& Enable Validator](#create--enable-validator)
 - [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
-- [Download/Install Rebuild From Snapshot Script](#downloadinstall-rebuild-from-snapshot-script)
-- [Download/Install Generator Enable/Disable Scripts](#downloadinstall-generator-enabledisable-scripts)
 
 ## Install Base
 
@@ -117,6 +121,54 @@ Output should be >= 101000000000 ( 10 LSK for registration & 1000 LSK for self-s
 # Replace LSK address and run:
 lisk-core endpoint:invoke token_getBalance '{"address":"lsk3oe7hmf5k5e4f58zhmbouzx3t4v98sgsfuhwnw", "tokenID":"0200000000000000"}' | jq '.availableBalance' |  tr -d '"'
 ```
+
+##  Download/Install LiskBeta4 Scripts
+
+### Create Validator
+```shell
+SCRIPTNAME="lisk-core4-create-validator.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+```
+
+### Rebuild From Snapshot
+```shell
+SCRIPTNAME="lisk-core4-rebuild-blockchain-from-snapshot.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+```
+
+### Enable / Disable Generator Mode
+```shell
+SCRIPTNAME="lisk-core4-enable-generator.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+SCRIPTNAME="lisk-core4-disable-generator.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+```
+
+### Generator Info
+```shell
+SCRIPTNAME="lisk-core4-show-generator-info.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+```
+
+### Create CMD Alias (Optional)
+
+```shell
+cat >> "$HOME/.bash_aliases" << EOF_Alias_Config
+alias lisk-create-validator='~/lisk-core4-create-validator.sh'
+alias lisk-rebuild='~/lisk-core4-rebuild-blockchain-from-snapshot.sh'
+alias lisk-generator-enable='~/lisk-core4-enable-generator.sh'
+alias lisk-generator-disable='~/lisk-core4-disable-generator.sh'
+alias lisk-generator-info='~/lisk-core4-show-generator-info.sh'
+EOF_Alias_Config
+
+source "$HOME/.bashrc"
+```
+
 ## Create & Enable Validator
 
 * Create/Register Validator
@@ -145,13 +197,7 @@ If you want to understand the process, use the [Official Documentation](https://
 You can also use this [script](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh) that bundle all steps into a single command.
 
 ```shell
-# Download
-SCRIPTNAME="lisk-core4-create-validator.sh"
-curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
-chmod 0700 "$HOME/$SCRIPTNAME"
-
-# Run
-"$HOME/$SCRIPTNAME"
+~/lisk-core4-create-validator.sh
 ```
 
 Script tasks:
@@ -182,36 +228,3 @@ Script tasks:
 * Go to the validators section & search your validator name.
 * You should have the `standby` status.
 * Watch (after a while) that your status is `active` to confirm all went well.
-
-## Download/Install Rebuild From Snapshot Script
-
-```shell
-SCRIPTNAME="lisk-core4-rebuild-blockchain-from-snapshot.sh"
-curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
-chmod 0700 "$HOME/$SCRIPTNAME"
-
-cat >> "$HOME/.bash_aliases" << EOF_Alias_Config
-alias lisk-rebuild='~/$SCRIPTNAME'
-EOF_Alias_Config
-
-source "$HOME/.bashrc"
-```
-
-## Download/Install Generator Enable/Disable Scripts
-
-```shell
-SCRIPTNAME="lisk-core4-enable-generator.sh"
-curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
-chmod 0700 "$HOME/$SCRIPTNAME"
-
-SCRIPTNAME="lisk-core4-disable-generator.sh"
-curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
-chmod 0700 "$HOME/$SCRIPTNAME"
-
-cat >> "$HOME/.bash_aliases" << EOF_Alias_Config
-alias lisk-generator-enable='~/lisk-core4-enable-generator.sh'
-alias lisk-generator-disable='~/lisk-core4-disable-generator.sh'
-EOF_Alias_Config
-
-source "$HOME/.bashrc"
-```
