@@ -101,17 +101,21 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
 
 ## Snapshot
 
-* Gr33nDrag0n [beta4-snapshot.lisknode.io](https://beta4-snapshot.lisknode.io/)
+* gr33ndrag0n [beta4-snapshot.lisknode.io](https://beta4-snapshot.lisknode.io/)
 
 ## Scripts
 
 ### Bash / Server
 
-* gr33ndrag0n - [lisk-core4-create-validator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-validator.sh)
-* gr33ndrag0n - [lisk-core4-create-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-create-snapshot.sh)
-* gr33ndrag0n - [lisk-core4-rebuild-blockchain-from-snapshot.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
-* gr33ndrag0n - [lisk-core4-enable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-enable-generator.sh)
-* gr33ndrag0n - [lisk-core4-disable-generator.sh](https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/lisk-core4-disable-generator.sh)
+* Generator
+  * gr33ndrag0n - [lisk-core4-create-validator.sh](./SH/lisk-core4-create-validator.sh)
+  * gr33ndrag0n - [lisk-core4-enable-generator.sh](./SH/lisk-core4-enable-generator.sh)
+  * gr33ndrag0n - [lisk-core4-disable-generator.sh](./SH/lisk-core4-disable-generator.sh)
+  * gr33ndrag0n - [lisk-core4-show-generator-info.sh](./SH/lisk-core4-show-generator-info.sh)
+
+* Snapshot
+  * gr33ndrag0n - [lisk-core4-create-snapshot.sh](./SH/lisk-core4-create-snapshot.sh)
+  * gr33ndrag0n - [lisk-core4-rebuild-blockchain-from-snapshot.sh](./SH/lisk-core4-rebuild-blockchain-from-snapshot.sh)
 
 ### NodeJS
 
