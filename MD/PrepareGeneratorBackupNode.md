@@ -3,7 +3,7 @@
 # Prepare a backup node for Validator/Generator.
 
 Once your 2nd server lisk-core node is functional and in sync with network.
-Take note that even if the "Last Block Info" are also transferred, they will be invalid (on server 2) as soon as another block is generated on server 1.
+Take note that even if the "Last Block Info" are also transferred, they will be invalid (on server 2) as soon as another block is generated (on server 1).
 To Switch Validator/Generator Active Node (after this procedure will be done) use the guide [here](./SwitchGeneratorActiveNode.md).
 
 ## Get Required Files from **Server 1**
