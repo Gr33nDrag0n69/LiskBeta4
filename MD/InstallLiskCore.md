@@ -16,7 +16,7 @@ Install Lisk-Core 4 Beta 0 on Ubuntu using binaries, PM2 & custom scripts
   - [Create Validator](#create-validator)
   - [Rebuild From Snapshot](#rebuild-from-snapshot)
   - [Enable / Disable Generator Mode](#enable--disable-generator-mode)
-  - [Generator Info](#generator-info)
+  - [Show Generator Info \& Generator Import Command](#show-generator-info--generator-import-command)
   - [Create CMD Alias (Optional)](#create-cmd-alias-optional)
 - [Create \& Enable Validator](#create--enable-validator)
 - [Wait for Validator to generate a block as Generator](#wait-for-validator-to-generate-a-block-as-generator)
@@ -148,9 +148,12 @@ curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n
 chmod 0700 "$HOME/$SCRIPTNAME"
 ```
 
-### Generator Info
+### Show Generator Info & Generator Import Command
 ```shell
 SCRIPTNAME="lisk-core4-show-generator-info.sh"
+curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
+chmod 0700 "$HOME/$SCRIPTNAME"
+SCRIPTNAME="lisk-core4-show-generator-import-cmd.sh"
 curl -s -o "$HOME/$SCRIPTNAME" -L "https://raw.githubusercontent.com/Gr33nDrag0n69/LiskBeta4/main/SH/$SCRIPTNAME"
 chmod 0700 "$HOME/$SCRIPTNAME"
 ```
@@ -164,6 +167,7 @@ alias lisk-rebuild='~/lisk-core4-rebuild-blockchain-from-snapshot.sh'
 alias lisk-generator-enable='~/lisk-core4-enable-generator.sh'
 alias lisk-generator-disable='~/lisk-core4-disable-generator.sh'
 alias lisk-generator-info='~/lisk-core4-show-generator-info.sh'
+alias lisk-generator-import-cmd='~/lisk-core4-show-generator-import-cmd.sh'
 EOF_Alias_Config
 
 source "$HOME/.bashrc"
