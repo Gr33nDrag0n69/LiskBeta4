@@ -19,7 +19,7 @@ read -rs ValidatorPassword
 
 #---
 
-OutputDirectory="$HOME/$ValidatorName-validator-backup/"
+OutputDirectory="$HOME/backup-$ValidatorName-validator/"
 mkdir "$OutputDirectory"
 
 ValidatorKeys_JsonFile=$OutputDirectory'keys.json'
