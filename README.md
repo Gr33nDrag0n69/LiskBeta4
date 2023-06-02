@@ -67,6 +67,7 @@ Please note that the following betanet specific information is not in the docume
 
 * [Install Lisk-Core Beta4](./MD/InstallLiskCore.md)
 * [Prepare a backup node for Validator/Generator](./MD/PrepareGeneratorBackupNode.md)
+* [Switch Validator/Generator Active Node](./MD/SwitchGeneratorActiveNode.md)
 
 ## Faucet
 
