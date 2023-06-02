@@ -35,7 +35,7 @@ rm -f "$HOME/server1-hashonionseeds-export.json"
 
 ## Edit Exported Files
 
-If you have more then one validator/generator configured in 'Server 1' and you don't want to import all of them on 'Server 2', remove unwanted data from the json files.
+If you have more then one Validator(s) Keys, Generator(s) Info or Hash Onion Seed configured in 'Server 1' and you don't want to import all of this data on 'Server 2', remove unwanted data from the json files.
 
 ## Configure **Server 2**
 
