@@ -111,6 +111,7 @@ To quickly explore the API endpoint, you can use this online tool I've built: [h
   * [lisk-core4-enable-generator.sh](./SH/lisk-core4-enable-generator.sh)
   * [lisk-core4-disable-generator.sh](./SH/lisk-core4-disable-generator.sh)
   * [lisk-core4-show-generator-info.sh](./SH/lisk-core4-show-generator-info.sh)
+  * [lisk-core4-show-generator-import-cmd.sh](./SH/lisk-core4-show-generator-import-cmd.sh)
 
 * Snapshot
   * [lisk-core4-create-snapshot.sh](./SH/lisk-core4-create-snapshot.sh)
