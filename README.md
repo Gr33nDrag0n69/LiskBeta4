@@ -73,7 +73,7 @@ Please note that the following betanet specific information is not in the docume
 
 *If the faucet is down, you can always ask in #network channel of lisk discord server.*
 
-* Lisk.com - [BetaNet v4 Faucet](https://betanet-faucet.lisk.com/)
+* [BetaNet v4 Faucet](https://betanet-faucet.lisk.com/)
 
 ## Public API Endpoints
 
