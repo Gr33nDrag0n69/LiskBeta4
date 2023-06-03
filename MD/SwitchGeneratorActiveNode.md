@@ -90,6 +90,7 @@ generator:enable lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3 --use-status-value
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
-Output Example: ![SwitchGeneratorActiveNode-Step09](../PNG/SwitchGeneratorActiveNode-Step09.png)
+#### Output Example:
+![SwitchGeneratorActiveNode-Step09](../PNG/SwitchGeneratorActiveNode-Step09.png)
 
 10. Close SSH on both servers.
