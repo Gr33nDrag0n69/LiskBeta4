@@ -18,8 +18,8 @@ The following scripts must be installed on both servers:
 
 * lisk-core4-show-generator-info.sh
 * lisk-core4-show-generator-import-cmd.sh
-* lisk-core4-enable-generator.sh (Optional, auto-detect validator(s) address)
-* lisk-core4-disable-generator.sh (Optional, auto-detect validator(s) address)
+* lisk-core4-enable-generator.sh *(Optional, auto-detect validator(s) address)*
+* lisk-core4-disable-generator.sh *(Optional, auto-detect validator(s) address)*
 
 See [Download/Install LiskBeta4 Scripts](./InstallLiskCore.md#downloadinstall-liskbeta4-scripts) for install instructions.
 
