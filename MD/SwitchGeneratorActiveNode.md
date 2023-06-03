@@ -86,7 +86,8 @@ generator:enable lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3 --use-status-value
 ![SwitchGeneratorActiveNode-Step08](../PNG/SwitchGeneratorActiveNode-Step08.png)
 
 ### 9. **Server 2**: (Optional) Show Current Generator Info Status
-  * Confirm the generator is currently ACTIVE.
+  Confirm the generator is currently ACTIVE.
+
     ```shell
     ~/lisk-core4-show-generator-info.sh
     ```
