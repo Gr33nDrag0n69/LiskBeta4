@@ -46,8 +46,8 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ![SwitchGeneratorActiveNode-Step02](../PNG/SwitchGeneratorActiveNode-Step02.png)
 
 ### 3. **Server 1**: Show Current Generator Info Status
-  * Confirm the generator is currently INACTIVE.
-  * Make sure the 'Local Lisk-Core' values are all GREEN.
+Confirm the generator is currently INACTIVE & ALL the 'Local Lisk-Core' values are all GREEN.
+
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
@@ -55,6 +55,8 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ![SwitchGeneratorActiveNode-Step03](../PNG/SwitchGeneratorActiveNode-Step03.png)
 
 ### 4. **Server 1**: Create Generator Info Import CMD
+The output (between the green lines) of this command will be used at step 6.
+
 ```shell
 ~/lisk-core4-show-generator-import-cmd.sh
 ```
@@ -62,7 +64,8 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ![SwitchGeneratorActiveNode-Step04](../PNG/SwitchGeneratorActiveNode-Step04.png)
 
 ### 5. **Server 2**: (Optional) Show Current Generator Info Status
-  * The 'Local Lisk-Core' values are currently RED.
+The 'Local Lisk-Core' values are currently RED.
+
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
@@ -70,11 +73,12 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ![SwitchGeneratorActiveNode-Step05](../PNG/SwitchGeneratorActiveNode-Step05.png)
 
 ### 6. **Server 2**: Update Generator Info
-Copy the part between the green lines of the output of step 4 (on server 1).
+Copy the part  of the output of step 4 (on server 1).
 Paste it directly in terminal of server 2.
 
 ### 7. **Server 2**: Show Current Generator Info Status
-  * Make sure the 'Local Lisk-Core' values are now all GREEN.
+Make sure the 'Local Lisk-Core' values are now all GREEN.
+
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
