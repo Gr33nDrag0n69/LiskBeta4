@@ -32,6 +32,8 @@ For this example, we will switch ACTIVE node for `opt1mus / lskzytpy82c8xtkpopch
 ### 1. Open SSH on both servers.
 
 ### 2. **Server 1**: Disable Generator
+Use Script OR Edit Command with your validator address.
+
 ```shell
 # Script
 ~/lisk-core4-disable-generator.sh
@@ -40,7 +42,7 @@ For this example, we will switch ACTIVE node for `opt1mus / lskzytpy82c8xtkpopch
 # lisk-core cmd
 lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step02](../PNG/SwitchGeneratorActiveNode-Step02.png)
 
 ### 3. **Server 1**: Show Current Generator Info Status
@@ -49,14 +51,14 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step03](../PNG/SwitchGeneratorActiveNode-Step03.png)
 
 ### 4. **Server 1**: Create Generator Info Import CMD
 ```shell
 ~/lisk-core4-show-generator-import-cmd.sh
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step04](../PNG/SwitchGeneratorActiveNode-Step04.png)
 
 ### 5. **Server 2**: (Optional) Show Current Generator Info Status
@@ -64,7 +66,7 @@ lisk-core generator:disable "lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3"
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step05](../PNG/SwitchGeneratorActiveNode-Step05.png)
 
 ### 6. **Server 2**: Update Generator Info
@@ -76,7 +78,7 @@ Paste it directly in terminal of server 2.
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step07](../PNG/SwitchGeneratorActiveNode-Step07.png)
 
 ### 8. **Server 2**: Enable Generator
@@ -90,7 +92,7 @@ Use Script OR Edit Command with your validator address.
 # lisk-core cmd
 generator:enable lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3 --use-status-value
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step08](../PNG/SwitchGeneratorActiveNode-Step08.png)
 
 ### 9. **Server 2**: (Optional) Show Current Generator Info Status
@@ -99,7 +101,7 @@ Confirm the generator is currently ACTIVE.
 ```shell
 ~/lisk-core4-show-generator-info.sh
 ```
-#### Output Example:
+#### Script Output Example:
 ![SwitchGeneratorActiveNode-Step09](../PNG/SwitchGeneratorActiveNode-Step09.png)
 
 ### 10. Close SSH on both servers.
