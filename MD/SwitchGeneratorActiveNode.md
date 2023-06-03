@@ -74,7 +74,7 @@ Paste it directly in terminal of server 2.
 ```
 ![SwitchGeneratorActiveNode-Step07](../PNG/SwitchGeneratorActiveNode-Step07.png)
 
-8. **Server 2**: Enable Generator
+### 8. **Server 2**: Enable Generator
 ```shell
 # Script
 ~/lisk-core4-enable-generator.sh
@@ -85,12 +85,12 @@ generator:enable lskzytpy82c8xtkpopchzee3vydza4cvjvcsa4fv3 --use-status-value
 ```
 ![SwitchGeneratorActiveNode-Step08](../PNG/SwitchGeneratorActiveNode-Step08.png)
 
-9. **Server 2**: (Optional) Show Current Generator Info Status
+### 9. **Server 2**: (Optional) Show Current Generator Info Status
   * Confirm the generator is currently ACTIVE.
-```shell
-~/lisk-core4-show-generator-info.sh
-```
-#### Output Example:
-![SwitchGeneratorActiveNode-Step09](../PNG/SwitchGeneratorActiveNode-Step09.png)
+    ```shell
+    ~/lisk-core4-show-generator-info.sh
+    ```
+    #### Output Example:
+    ![SwitchGeneratorActiveNode-Step09](../PNG/SwitchGeneratorActiveNode-Step09.png)
 
-10. Close SSH on both servers.
+### 10. Close SSH on both servers.
